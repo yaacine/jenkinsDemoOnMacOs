@@ -71,7 +71,8 @@ publishing {
 }
 
 
-generateMatrixAPI.finalizedBy "publish"
+//generateMatrixAPI.finalizedBy "publish"
+generateMatrixAPI.finalizedBy "publishToSlack"
 
 
 
