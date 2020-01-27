@@ -3,8 +3,13 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        build(job: 'build', propagate: true, quietPeriod: 5, wait: true)
-        sh 'gradle build'
+        bat 'gradle build'
+      }
+    }
+
+    stage('mail Notification') {
+      steps {
+        mail(to: 'gn_tchoulak@esi.dz', subject: 'build done', body: 'hello world')
       }
     }
 
