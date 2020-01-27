@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('mail Notification') {
+    stage('mail Notificatoin') {
       steps {
-        mail(to: 'gn_tchoulak@esi.dz', subject: 'build done', body: 'hello world')
+        mail(subject: 'Build succes', body: 'the buils on Matrix api is completed ', from: 'yaaacine@gmail.com', to: 'gy_zidelmal@esi.dz')
       }
     }
 
