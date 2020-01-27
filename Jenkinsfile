@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('code review') {
+      steps {
+        withSonarQubeEnv 'sonar'
+      }
+    }
+
   }
 }
