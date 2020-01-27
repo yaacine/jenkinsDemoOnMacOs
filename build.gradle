@@ -63,7 +63,7 @@ publishing {
                 username 'myMavenRepo'
 
                 // myMavenRepoWritePassword est le mot de passe mis dans le fichier ~/.gradle/gradle.properties
-                password myMavenRepoWritePassword
+                password 'myMavenRepo'
             }
         }
     }
