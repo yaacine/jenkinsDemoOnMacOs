@@ -1,0 +1,9 @@
+-classpath '/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/build/classes/java/main:/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/build/resources/main'
+-d '/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/build/docs/javadoc'
+-doctitle 'TP6_gradle 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'TP6_gradle 1.0 API'
+'/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/src/main/java/com/example/exception/NoSquareException.java'
+'/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/src/main/java/com/example/model/Matrix.java'
+'/Volumes/Seagate Expansion Drive/MacDisk/2CS-SIL/OUTILS/TP6_gradle/src/main/java/com/example/service/MatrixMathematics.java'
