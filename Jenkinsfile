@@ -14,11 +14,34 @@ pipeline {
     }
 
     stage('code Review') {
-      steps {
-        withSonarQubeEnv('sonar') {
-          sh 'gradle sonarQube'
+      parallel {
+        stage('code Review') {
+          steps {
+            withSonarQubeEnv('sonar') {
+              sh 'gradle sonarQube'
+            }
+
+          }
         }
 
+        stage('test reporting') {
+          steps {
+            jacoco(buildOverBuild: true)
+          }
+        }
+
+      }
+    }
+
+    stage('deployement') {
+      steps {
+        sh 'gradle publish'
+      }
+    }
+
+    stage('slack notification') {
+      steps {
+        slackSend(token: 'TRT34LYF8/BSMC2FW23/buxcNiFEunZFTD46KGbj8gaA', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'https://esioutilsyacine.slack.com/', message: 'deployement done', channel: 'général')
       }
     }
 
