@@ -34,14 +34,20 @@ pipeline {
     }
 
     stage('deployement') {
+      when{
+        branch 'master'
+      }
       steps {
         sh 'gradle publish'
       }
     }
 
     stage('slack notification') {
+       when{
+        branch 'master'
+      }
       steps {
-        slackSend(token: 'TRT34LYF8/BSMC2FW23/buxcNiFEunZFTD46KGbj8gaA', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'https://esioutilsyacine.slack.com/', message: 'deployement done', channel: 'général')
+        slackSend(token: 'TRT34LYF8/BSMC2FW23/buxcNiFEunZFTD46KGbj8gaA', baseUrl: 'https://hooks.slack.com/services/', teamDomain: 'https://esioutilsyacine.slack.com/', message: 'deployement done', channel: 'gÃ©nÃ©ral')
       }
     }
 
