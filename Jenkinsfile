@@ -13,11 +13,7 @@ pipeline {
       }
     }
 
-    stage('code review') {
-      steps {
-      
-      }
-    }
+    
 
   }
 }
