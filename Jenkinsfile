@@ -16,8 +16,8 @@ pipeline {
     stage('code review') {
       steps {
         withSonarQubeEnv 'sonar'
-        waitForQualityGate(abortPipeline: true, credentialsId: 'sonar')
         sh 'gradle sonarqube'
+        waitForQualityGate(abortPipeline: true, credentialsId: 'sonar')
       }
     }
 
