@@ -13,7 +13,14 @@ pipeline {
       }
     }
 
-    
+    stage('code Review') {
+      steps {
+        withSonarQubeEnv('sonar') {
+          sh 'gradle sonarQube'
+        }
+
+      }
+    }
 
   }
 }
