@@ -3,9 +3,11 @@ package com.example.model;
 public class Matrix {
 
 
-	private int tty ; 
-	
-	
+
+public int addition(){
+	return 3;
+}
+
 	private int nrows;
 	private int ncols;
 	private double[][] data;
