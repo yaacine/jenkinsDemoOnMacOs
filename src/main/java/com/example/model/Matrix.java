@@ -4,7 +4,9 @@ public class Matrix {
 
 
 
-
+public int addition(){
+	return 3;
+}
 	private int nrows;
 	private int ncols;
 	private double[][] data;
