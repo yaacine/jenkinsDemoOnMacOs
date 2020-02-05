@@ -10,7 +10,6 @@ public class MatrixMathematicsTest
 {
 
 
-
 	@Test
 	public final void testTranspose()
 	{
