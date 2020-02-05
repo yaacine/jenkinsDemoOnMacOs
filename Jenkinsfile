@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'gradle build '
+        archiveArtifacts 'build/libs/*.jar'
       }
     }
 
@@ -21,6 +22,7 @@ pipeline {
               sh 'gradle sonarQube'
             }
 
+            waitForQualityGate true
           }
         }
 
