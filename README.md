@@ -5,5 +5,5 @@ valid 3.0
 
 end gale
 
-
+ne
 ne<
