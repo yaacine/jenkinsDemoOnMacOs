@@ -26,7 +26,7 @@ pipeline {
 
         stage('test reporting') {
           steps {
-            jacoco(buildOverBuild: true)
+            jacoco(execPattern: 'build/jacoco/*.exec', exclusionPattern: '**/test/*.class')
           }
         }
 
@@ -34,7 +34,7 @@ pipeline {
     }
 
     stage('deployement') {
-      when{
+      when {
         branch 'master'
       }
       steps {
@@ -43,7 +43,7 @@ pipeline {
     }
 
     stage('slack notification') {
-       when{
+      when {
         branch 'master'
       }
       steps {
