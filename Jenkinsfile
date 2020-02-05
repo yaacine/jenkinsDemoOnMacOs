@@ -26,7 +26,7 @@ pipeline {
 
         stage('test reporting') {
           steps {
-            jacoco(buildOverBuild: true)
+            jacoco(execPattern: 'build/jacoco/*.exec', exclusionPattern: '**/test/*.class')
           }
         }
 
